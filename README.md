@@ -1,4 +1,4 @@
-A Python script that generates mazes that have one unique solution.
+A Python script that generates mazes that have an unique solution.
 
 An example of 30x30 maze : 
 
