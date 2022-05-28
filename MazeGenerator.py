@@ -1,7 +1,7 @@
 """
 MAZE GENERATOR
 """
-
+import keyboard
 # Modules
 from matplotlib.pyplot import *
 from random import randint
@@ -186,6 +186,13 @@ def AffSol(Sol):
     y.append(m-0.5)
     plot(x,y,color="r",linewidth=width/2)
 
+
+
+
+""" This part of the script does not work anymore. It allowed the user to move
+a cursor through the maze
+"""
+
 def AffChem(Chem):
     
     x=[]
@@ -204,7 +211,7 @@ def Effacer(route):
     plot(x,y,color="w",linewidth=width)
     
 def press(event):
-    
+    print(event)
     if not CHEM[-1]==[0,m]:
         maj=False
         i,j=CHEM[-1]
@@ -249,11 +256,10 @@ fig.canvas.mpl_connect('key_press_event', press)
 fig.canvas.mpl_connect('key_release_event', release)
 
 AffLaby(Sud,Est)
-AffChem([[m,0]]+CHEM)
+#AffChem([[m,0]]+CHEM)
 plot([n-0.5,n+0.5],[m-0.5,m-0.5],"w")
 
 axis("equal")
-
 
 
 
